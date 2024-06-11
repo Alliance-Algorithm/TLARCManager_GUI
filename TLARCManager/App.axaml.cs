@@ -2,6 +2,7 @@
 
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 using Meadow;
@@ -57,4 +58,5 @@ public partial class App : AvaloniaMeadowApplication<Linux<RaspberryPi>>
 
         base.OnFrameworkInitializationCompleted();
     }
+
 }

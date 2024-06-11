@@ -1,11 +1,12 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 
-namespace TLARCManager.Views;
-
-public partial class MainView : UserControl
+namespace TLARCManager.Views
 {
-    public MainView()
+    public partial class MainView : UserControl
     {
-        InitializeComponent();
+        public MainView()
+        {
+            InitializeComponent();
+        }
     }
 }

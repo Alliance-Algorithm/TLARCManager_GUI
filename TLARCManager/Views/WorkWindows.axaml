@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:TLARCManager.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="TLARCManager.Views.MainWindow"
+        x:Class="TLARCManager.Views.WorkWindows"
+        x:DataType="vm:MainComponentsViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="TLARCManager">
   <DockPanel>
@@ -13,13 +14,17 @@
       <Menu>
         <MenuItem Header="_文件" >
           <MenuItem Header="_打开..." Click="OnOpenDirectClick"/>
+          <MenuItem Header="_保存..." />
           <Separator/>
           <MenuItem Header="_退出" Click="OnExitClick"/>
+        </MenuItem>
+        <MenuItem Header="_编辑" >
+          <Separator/>
         </MenuItem>
       </Menu>
     </Border>
     <Border Background="White" BorderBrush="Black" BorderThickness="0">
-      <views:MainView />
+      <views:WorkSpace DataContext="{Binding Components}"/>
     </Border>
-    </DockPanel>
+  </DockPanel>
 </Window>
