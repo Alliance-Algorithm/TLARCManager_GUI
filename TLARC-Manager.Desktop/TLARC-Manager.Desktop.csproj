@@ -11,10 +11,9 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
-    <PackageReference Include="Avalonia.LinuxFramebuffer" Version="$(AvaloniaVersion)" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TLARCManager\TLARCManager.csproj" />
+    <ProjectReference Include="..\TLARC-Manager\TLARC-Manager.csproj" />
   </ItemGroup>
 </Project>

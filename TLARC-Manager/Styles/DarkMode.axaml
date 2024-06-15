@@ -1,0 +1,60 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <UserControl>
+      <DockPanel>
+        <Border Height="128" Width="125" >
+          <Button>
+            
+          </Button>
+        </Border>
+
+
+        <Border DockPanel.Dock="Left" >
+          <Menu>
+            <MenuItem Header="_文件" >
+              <MenuItem Header="_打开"/>
+              <MenuItem Header="_退出"/>
+            </MenuItem>
+          </Menu>
+          </Border>
+      </DockPanel>
+    </UserControl>
+  </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+  <Style Selector="Button">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="Transparent"/>
+  </Style>
+
+  <Style Selector="TextBlock">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="#fcfcfc"/>
+  </Style>
+  
+  <Style Selector="Separator">
+    <Setter Property="Background" Value="#1e1e1e"/>
+  </Style>
+
+  <Style Selector="MenuItem">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Foreground" Value="#fcfcfc"/>
+    <Setter Property="BorderThickness" Value="0"/>
+  </Style>
+
+
+  <Style Selector="DockPanel">
+    <Setter Property="Background" Value="Transparent"/>
+  </Style>
+  
+  <Style Selector="UserControl">
+    <Setter Property="Background" Value="#1e1e1e"/>
+    <Setter Property="Foreground" Value="#fcfcfc"/>
+  </Style>
+  <Style Selector="Window">
+    <Setter Property="Background" Value="#1e1e1e"/>
+    <Setter Property="Foreground" Value="#fcfcfc"/>
+  </Style>
+  <!--#90e8a9-->
+</Styles>

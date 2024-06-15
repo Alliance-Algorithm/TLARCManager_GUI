@@ -1,7 +1,8 @@
 ﻿using ReactiveUI;
 
-namespace TLARCManager.ViewModels;
+namespace TLARC_Manager.ViewModels;
 
 public class ViewModelBase : ReactiveObject
 {
+
 }

@@ -1,0 +1,56 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TLARC_Manager.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TLARC_Manager.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  
+  <Design.DataContext>
+    <vm:MainViewModel/>
+  </Design.DataContext>
+  <Border BorderThickness="1">
+  <DockPanel VerticalAlignment="Stretch">
+    <Border  x:Name="DrawWindowBorder" Background="Transparent" DockPanel.Dock="Top" Margin="0,0,0,0">
+      <DockPanel Background="#3e3e3e" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <Border DockPanel.Dock="Left" >
+          <Menu VerticalAlignment="Center">
+            <MenuItem Header="_文件" Background="Transparent"> 
+                <MenuItem Header="_打开" Background="Transparent"/>
+              <Separator/>
+                <MenuItem Header="_退出" Background="Transparent"/>
+            </MenuItem>
+          </Menu>
+        </Border>
+        <Grid ColumnDefinitions="auto,auto,auto" DockPanel.Dock="Right" HorizontalAlignment="Right">
+          <Button Grid.Column="2" Background="Transparent" Command="{Binding CloseWindowCommand}">
+            <Image Source="avares://TLARC-Manager/Assets/ButtonIcon/close-white-512.png" Height="15"/>
+          </Button>
+          <Button Grid.Column="1" Background="Transparent" Command="{Binding MaximizeWindowCommand}">
+            <Image Source="{Binding Icon}" Height="15" Width="15"/>
+          </Button>
+          <Button Grid.Column="0" Background="Transparent" Command="{Binding MinimizeWindowCommand}">
+            <Image Source="avares://TLARC-Manager/Assets/ButtonIcon/minimize-white-512.png" Height="15"/>
+          </Button>
+        </Grid>
+      </DockPanel>
+    </Border>
+    <Grid ColumnDefinitions="4*,*" RowDefinitions="100,*">
+      <Border Grid.ColumnSpan="1">
+        <DockPanel>
+          <TextBlock Text="TLARC-Manager V1.0" DockPanel.Dock="Left" Margin="10" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+          <TextBlock Text="最近项目" Margin="10"  DockPanel.Dock="Right" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </DockPanel>
+      </Border>
+      <Border Grid.Column="0" Grid.Row="1"></Border>
+      <Border  Grid.Column="1" Grid.RowSpan="1" Grid.Row="1" MinWidth="100">
+        <StackPanel Margin="20" VerticalAlignment="Bottom">
+          <Button Padding="10" Margin="0,0,0,10" Background="#2e73c7" Content="打开" Command="{Binding OpenProjectCommand}"/>
+          <Button Padding="10" Margin="0,0,0,10"  BorderBrush="#2e73c7" Content="新建" Command="{Binding CreateProjectCommand}"/>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </DockPanel>
+  </Border>
+</UserControl>

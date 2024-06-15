@@ -1,0 +1,11 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             RequestedThemeVariant ="Dark"
+             x:Class="TLARC_Manager.App">
+  <Application.Styles>
+    
+    <SimpleTheme>
+      <StyleInclude Source="avares://TLARC-Manager/Styles/DarkMode.axaml"/>
+    </SimpleTheme>
+  </Application.Styles>
+</Application>
