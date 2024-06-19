@@ -3,6 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);8602;8604</NoWarn>
   </PropertyGroup>
 
   

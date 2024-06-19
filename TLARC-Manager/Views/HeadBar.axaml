@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="clr-namespace:TLARC_Manager.ViewModels"
+             x:Class="TLARC_Manager.Views.HeadBar">
+  <Design.DataContext>
+    <vm:MainViewModel/>
+  </Design.DataContext>
+      <Border  x:Name="DrawWindowBorder" Background="Transparent" Margin="0,0,0,0">
+        <DockPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
+          <Border DockPanel.Dock="Left" >
+            <Menu VerticalAlignment="Center">
+              <MenuItem Header="_文件" Background="Transparent">
+                <MenuItem Header="_打开" Background="Transparent"/>
+                <Separator/>
+                <MenuItem Header="_退出" Background="Transparent"/>
+              </MenuItem>
+            </Menu>
+          </Border>
+          <Grid ColumnDefinitions="45,45,45" RowDefinitions="35" DockPanel.Dock="Right" HorizontalAlignment="Right">
+            <Button Grid.Column="2" Background="Transparent" Command="{Binding CloseWindowCommand}" >
+              <Image Source="avares://TLARC-Manager/Assets/ButtonIcon/close-white-512.png" Height="15"/>
+            </Button>
+            <Button Grid.Column="1" Background="Transparent" Command="{Binding MaximizeWindowCommand}" >
+              <Image Source="{Binding Icon}" Height="15" />
+            </Button>
+            <Button Grid.Column="0" Background="Transparent" Command="{Binding MinimizeWindowCommand}" >
+              <Image Source="avares://TLARC-Manager/Assets/ButtonIcon/minimize-white-512.png" Height="15"/>
+            </Button>
+          </Grid>
+        </DockPanel>
+      </Border>
+</UserControl>

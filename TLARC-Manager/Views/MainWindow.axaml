@@ -11,5 +11,14 @@
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints ="OSXThickTitleBar"
         SystemDecorations="None">
-  <views:MainView/>
+  
+  <Border BorderThickness="1">
+    <DockPanel VerticalAlignment="Stretch">
+      <views:HeadBar DockPanel.Dock="Top"/>
+      <Grid x:Name="MainGrid" ColumnDefinitions="* * * * * * * * * *"
+            RowDefinitions="35 * * * * * * * * *">
+        <views:MainView Grid.ColumnSpan="10" Grid.RowSpan="10"/>
+      </Grid>
+    </DockPanel>
+  </Border>
 </Window>

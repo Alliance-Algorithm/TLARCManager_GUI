@@ -1,0 +1,15 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TLARC_Manager.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TLARC_Manager.Views.DependenciesAndTimeLine"
+             x:DataType="vm:MainViewModel">
+  <Border BorderBrush="#3e3e3e" BorderThickness="2">
+    <Grid x:Name="MainGrid" VerticalAlignment="Center" HorizontalAlignment="Center">
+      <TextBlock Text="这是依赖关系和时间线视图" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+      <Button ></Button>
+    </Grid>
+  </Border>
+ </UserControl>

@@ -41,6 +41,7 @@
     <Setter Property="Background" Value="Transparent"/>
     <Setter Property="Foreground" Value="#fcfcfc"/>
     <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="FontSize" Value="15"/>
   </Style>
 
 
